@@ -1,0 +1,14 @@
+View(train)
+> test.survived <- data.frame(Survived = rep("None", nrow(test)), test[,])
+> data.combined <- rbind(train, test.survived)
+> str(data.combined)
+data.combined$Pclass <- as.factor(data.combined$Pclass)
+> table(data.combined$Survived)
+ table(data.combined$Pclass)
+ 
+ ##install ggplot
+ ggplot(train, aes(x = Pclass, fill = factor(Survived))) + 
+        geom_bar(width = 0.5) + 
+        xlab("Pclass") + 
+        ylab("Total Count")+ 
+         labs(fill = "Survived")
